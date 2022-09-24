@@ -8,7 +8,7 @@ $color = $_POST['warna'];
 $number = $_POST['no_polisi'];
 $type = $_POST['jenis'];
 
-$id = $idUser.$type.$number;
+$id = $idUser."-".$type.$number;
 
 $querry = "INSERT INTO kendaraan VALUES ('$id', '$idUser', '$brand', '$model', '$color','$number', '$type')";
 $sql = mysqli_query($db_connect, $querry);
